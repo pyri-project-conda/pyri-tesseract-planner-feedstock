@@ -1,0 +1,31 @@
+package:
+  name: pyri-tesseract-planner
+  version: 0.1.0dev1
+
+source:
+  - git_url: https://github.com/pyri-project/pyri-tesseract-planning
+    folder: pyri-tesseract-planner
+  - git_url: https://github.com/pyri-project/pyri-tesseract-planning-browser
+    folder: pyri-tesseract-planner-browser
+
+requirements:
+  host:
+    - pyri-robotics-superpack
+    - tesseract-robotics-superpack
+    - pip
+    - setuptools
+    - wheel   
+
+  run:
+    - pyri-robotics-superpack
+    - tesseract-robotics-superpack
+
+build:
+  skip: true # [py<38]
+  entry_points:
+    - pyri-tesseract-planner-service = pyri.tesseract_planner.tesseract_planner_service.__main__:main
+
+about:
+  home: http://pyri.tech
+  license: Apache 2.0
+  summary: "PyRI Teach Pendant Tesseract Planner Runtime and WebUI Plugin"
