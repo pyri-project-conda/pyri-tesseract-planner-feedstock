@@ -14,11 +14,19 @@ requirements:
     - tesseract-robotics-superpack
     - pip
     - setuptools
-    - wheel   
+    - wheel
+    - python
+    - numpy
+    - robotraconteur
+    - robotraconteur_companion
+    - python
+    - numpy
 
   run:
     - pyri-robotics-superpack
     - tesseract-robotics-superpack
+    - python
+    - numpy
 
 build:
   skip: true # [py<38]
